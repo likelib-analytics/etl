@@ -2,6 +2,7 @@
 
 ## Migrations
 
+The migrations contain all the necessary SQL queries with table schemas and definitions.
 To start the migrations you need to run the following command:
 ```
 CH_HOST='some-ch-url.com:8123' python run_migrations.py

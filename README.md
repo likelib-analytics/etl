@@ -70,7 +70,7 @@ where address = 'some-address-xyz'
 
 ## Demo
 
-All the present metrics can be both queried in *live* and *demo* mode. The only difference for *demo* is the `_demo` suffix that is attached to every corresponding table name, e.g.:
+All the present metrics can be both queried in *live* and *demo* mode. The only difference for *demo* is the `_demo` suffix that is attached to every corresponding table name, for instance:
 ```
 sending_addresses_hour_mv_demo
 ```

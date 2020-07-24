@@ -45,6 +45,29 @@ from network_size_state_day_mv
 - Netowork Size (hourly)
 - Netowork Size (per minute)
 
+**Note:** The `balance` of a certain address can be fetched in the same way:
+- either up to a given block number (`depth`):
+```
+select
+    block,
+    address,
+    runningAccumulate(balance)
+from balance_block_mv
+where address = 'some-address-xyz'
+  and block <= 42069
+```
+
+- or up to a particular datetime:
+```
+select
+    dt_block,
+    address,
+    runningAccumulate(balance)
+from balance_block_mv
+where address = 'some-address-xyz'
+  and dt_block <= toDateTime('2020-08-09 20:00:00')
+```
+
 ## Demo
 
 All the present metrics can be both queried in *live* and *demo* mode. The only difference for *demo* is the `_demo` suffix that is attached to every corresponding table name, e.g.:

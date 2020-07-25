@@ -36,7 +36,7 @@ However, some metrics are built with the help of the AggregateFunction, and henc
 ```
 select 
     dt_day
-    ,runningAccumulate(addresses)
+    ,runningAccumulate(network_size_state)
 from network_size_state_day_mv
 ```
 

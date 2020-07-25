@@ -3,6 +3,6 @@ engine = AggregatingMergeTree() order by (dt_day)
 populate as
 select 
     toStartOfDay(dt)                        dt_day
-    ,uniqState(arrayJoin([from, to]))       addresses
+    ,uniqState(arrayJoin([from, to]))       network_size_state
 from transactions 
 group by dt_day;

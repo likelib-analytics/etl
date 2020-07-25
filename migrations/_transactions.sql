@@ -1,4 +1,4 @@
-create table if not exists transactions (
+CREATE TABLE IF NOT EXISTS transactions (
     from String,
     to String,
     transactionHash String,
@@ -8,4 +8,4 @@ create table if not exists transactions (
     fee UInt64,
     dt DateTime,
     depth UInt32
-) engine = ReplacingMergeTree() order by (from, to, dt, transactionHash);
+) ENGINE = ReplacingMergeTree() ORDER BY (from, to, dt, transactionHash);

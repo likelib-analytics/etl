@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS transactions_demo (
+CREATE TABLE IF NOT EXISTS transactions_kafka (
     from String,
     to String,
     transactionHash String,
@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS transactions_demo (
     fee UInt64,
     dt DateTime,
     depth UInt32
-) ENGINE = ReplacingMergeTree() ORDER BY (from, to, dt, transactionHash);
+) ENGINE = Kafka('kafka:9092', 'transactions', 'def_group', 'JSONEachRow');

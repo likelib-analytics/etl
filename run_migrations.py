@@ -9,7 +9,9 @@ if not "http" in CH_HOST:
 def run_migrations(ch_host: str):
     for folder in ["migrations", "migrations_demo"]:
         print(f"Run {folder}:")
-        for f in os.listdir(f"./{folder}"):
+        files = os.listdir(f"./{folder}")
+        files.sort()
+        for f in files:
             print(f"-> Running {f}...")
             with open(f"./{folder}/" + f, "r") as file:
                 query = file.read().strip()

@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS transactions_kafka (
     fee UInt64,
     dt DateTime,
     depth UInt32
-) ENGINE = Kafka('kafka:9092', 'transactions', 'def_group', 'JSONEachRow');
+) ENGINE = Kafka('kafka:19092', 'transactions', 'def_group', 'JSONEachRow');

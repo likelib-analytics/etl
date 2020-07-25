@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS blocks_demo_kafka (
     nonce UInt64,
     previous_block_hash String,
     dt DateTime
-) ENGINE = Kafka('kafka:9092', 'blocks_demo', 'def_group', 'JSONEachRow');
+) ENGINE = Kafka('kafka:19092', 'blocks_demo', 'def_group', 'JSONEachRow');
